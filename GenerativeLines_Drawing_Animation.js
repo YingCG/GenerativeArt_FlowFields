@@ -1,9 +1,11 @@
-const canvas = document.getElementById("canvas1")
-const ctx = canvas.getContext("2d");
-canvas.height = 700;
-canvas.width = 900;
+function drawLinesFromOnePoint() {
 
-class Line{
+const canvas3 = document.getElementById("canvas3")
+const ctx3 = canvas3.getContext("2d");
+canvas3.width = screen.availWidth /2;
+canvas3.height = screen.availHeight /2;
+
+class Line3{
     constructor(x,y){
         this.x = x;
         this.y = y;
@@ -13,25 +15,30 @@ class Line{
         context.moveTo(0, 0);
         context.lineTo(this.x, this.y);
         context.stroke();
+        context.strokeStyle = "pink"
     }
 }
 
 const linesArray = []
-const numberOfLines = 5;
+const numberOfLines = 50;
 for (let i = 0; i < numberOfLines; i++){
-    const x = Math.random() * canvas.height;
-    const y = Math.random() * canvas.width;
-    linesArray.push(new Line(x, y))
+    const x = Math.random() * canvas3.height;
+    const y = Math.random() * canvas3.width;
+    linesArray.push(new Line3(x, y))
 }
-console.log(linesArray)
+// console.log(linesArray)
 function animate(){
     // clear frame after aninmation
-    ctx.clearRect(0, 0, canvas.width, canvas.height)
-    //draw line
-    linesArray.forEach(line => line.draw(ctx))
-    // update line
+    ctx3.clearRect(0, 0, canvas3.width, canvas3.height)
+    linesArray.forEach(line => 
+        //draw line
+        line.draw(ctx3)
+        // update line
+        )
     requestAnimationFrame(animate)
     // console.log("animating")
 }
+console.log("Drawing lines from the same starting point")
 
 animate('animating')
+}

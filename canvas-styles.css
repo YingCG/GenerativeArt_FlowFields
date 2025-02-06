@@ -1,0 +1,50 @@
+#landing{
+    background: radial-gradient(circle,#f2e5f7, rgb(255, 255, 235),#ceedfa );
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.flex-container{
+    display: flex;
+    padding: 1rem;
+    margin: 1em 1em 0em 1em;
+    align-items: center;
+}
+
+.title{
+    color: #5C7285;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#regenerate{
+    display: flex;
+    padding: 0.5em 1em;
+    border: none;
+    color: #ceedfa ;
+    background-color: #5C7285;
+    font-size: large;
+    margin-left: 1em;
+    font-weight: 600;
+}
+
+.grid-layout{
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+canvas{
+    width: 30%;
+    height: 20%;
+    margin: 1rem;
+    gap: 1rem;
+    background-color: #030637;
+}
+
