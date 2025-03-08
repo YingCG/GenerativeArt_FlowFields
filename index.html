@@ -3,27 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./ying.ico"> 
+
     <link rel="stylesheet" type="text/css" href="./canvas-styles.css" />
     <title>Flow Field</title>
   </head>
   <body id="landing">
     <div class="flex-container">
-        <h1 class="title">Drawings with Code</h1>
+      <div class="flex-title">
+        <h1 class="title">Generative Art</h1>
         <button id="regenerate">Generate new drawings</button>
+      </div>
+      <div class="flex-title">
+        <a href="./drawingsCanvas.html">See More Drawing...</a>
+    </div>
     </div>
     <div class="grid-layout">
       <canvas id="canvas1"></canvas>
       <canvas id="canvas2"></canvas>
       <canvas id="canvas3"></canvas>
       <canvas id="canvas4"></canvas>
-      <canvas id="canvas5"></canvas>
-      <canvas id="canvas6"></canvas>
+      <!-- <canvas id="canvas5"></canvas>
+      <canvas id="canvas6"></canvas> -->
     </div>
-    <script type="text/javascript" src="./Generative_Singlelines_Drawing.js"></script>
-    <script type="text/javascript" src="./Generative_ContinueLines_Drawing.js"></script>
-    <script type="text/javascript"src="./GenerativeLines_Drawing_Animation.js"></script>
-    <script type="text/javascript" src="./GenerativeLines_DrawingLines_Animation.js"></script>
-    <script type="text/javascript" src="./clear-canvas.js"></script>
+
+    <script type="text/javascript" src="./Drawings/Generative_Singlelines_Drawing.js"></script>
+    <script type="text/javascript" src="./Drawings/Generative_ContinueLines_Drawing.js"></script>
+    <script type="text/javascript"src="./Drawings/GenerativeLines_DrawingLines_Animate.js"></script>
+    <script type="text/javascript" src="./Drawings/GenerativeLines_DrawingLines_RainAnimation.js"></script>
+    <script type="text/javascript" src="./Drawings/clear-canvas.js"></script>
 
     <!-- <script type="text/javascript" src="./scope_example.js"></script> -->
   </body>
