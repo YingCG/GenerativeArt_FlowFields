@@ -71,7 +71,7 @@ function drawRandomLines() {
 
 
   const linesArray = [];
-  const numberOfLines = 25;
+  const numberOfLines = 5;
   for (let i = 0; i < numberOfLines; i++) {
     linesArray.push(new Line(canvas));
   }
@@ -79,3 +79,5 @@ function drawRandomLines() {
 //   console.log("Single Lines Drawing")
   linesArray.forEach((line) => line.draw(ctx));
 }
+
+drawRandomLines()

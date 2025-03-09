@@ -1,15 +1,15 @@
-function drawContinueLines() {
-const canvas2 = document.getElementById('canvas2')
-const ctx2 = canvas2.getContext('2d')
+function drawContinueLines(){
+    const canvas = document.getElementById('canvas2')
+const ctx2 = canvas.getContext('2d')
 
 // canvas2.width = screen.availWidth;
 // canvas2.height = screen.availHeight;
 
 class Line1 {
-    constructor(canvas2){
-        this.canvas = canvas2;
-        this.x = Math.random() * canvas2.width;
-        this.y = Math.random() * canvas2.height;
+    constructor(canvas){
+        this.canvas = canvas;
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
         this.history =[{x: this.x, y: this.y}];
         this.lineWidth = Math.floor(Math.random() * 5 + 1);
         this.hue =  Math.floor(Math.random() * 360);
@@ -23,8 +23,8 @@ class Line1 {
 
         // how many line joining together
         for (let i =0; i < 10; i++){
-            this.x = Math.random() * canvas2.width;
-            this.y = Math.random() * canvas2.height;
+            this.x = Math.random() * canvas.width;
+            this.y = Math.random() * canvas.height;
             this.history.push({x: this.x, y: this.y});
         }
 
@@ -38,11 +38,13 @@ class Line1 {
 
 // how many of joining lines (in different colour)
 const linesArray = [];
-const numberOfLines = 3
+const numberOfLines = 1
 for (let i = 0; i < numberOfLines; i++){
-    linesArray.push(new Line1(canvas2));
+    linesArray.push(new Line1(canvas));
 }
 
 console.log("Continue Lines Drawing")
 linesArray.forEach(line => line.draw(ctx2))
 }
+
+drawContinueLines()

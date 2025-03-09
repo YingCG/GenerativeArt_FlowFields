@@ -1,4 +1,6 @@
-(function(){
+// (function(){
+
+function drawRainingLines(){
     const canvas4 = document.getElementById("canvas4")
     const ctx4 = canvas4.getContext("2d");
     // canvas4.width = 200;
@@ -35,7 +37,7 @@
             this.y += this.speedY;
             if (this.y > this.canvas.height) {
                 this.history = []
-                this.y = 0
+                this.y = Math.random() * this.canvas.width
                 this.x = Math.random() * this.canvas.width
             }
 
@@ -68,4 +70,6 @@
     console.log("Lines Drawing animation")
 
     animate()
-})()
+// })()
+}
+drawRainingLines()
