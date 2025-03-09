@@ -1,10 +1,9 @@
 // (function(){
 
 function drawRainingLines(){
-    const canvas4 = document.getElementById("canvas4")
-    const ctx4 = canvas4.getContext("2d");
-    // canvas4.width = 200;
-    // canvas4.height = 150;
+    const canvas = document.getElementById("canvas4")
+    const ctx4 = canvas.getContext("2d");
+
     
     class Line4{
         constructor(canvas, startY){
@@ -12,10 +11,10 @@ function drawRainingLines(){
             this.x = Math.random() * this.canvas.width;
             this.y = startY % this.canvas.height;
             this.history = [{x: this.x, y:this.y}];
-            this.lineWidth = Math.floor(Math.random() * 9 + 1);
+            this.lineWidth = Math.floor(Math.random() * 3);
             this.hue = Math.floor(Math.random() * 360);
-            this.maxLength = 10;
-            this.speedX = 5;
+            this.maxLength = 5;
+            this.speedX = 3;
             this.speedY = 3;
         }
         draw(context){
@@ -49,14 +48,14 @@ function drawRainingLines(){
     }
     
     const linesArray = []
-    const numberOfLines = 10;
+    const numberOfLines = 20;
     for (let i = 0; i < numberOfLines; i++){
-        linesArray.push(new Line4(canvas4, 7919 * i))
+        linesArray.push(new Line4(canvas, 7919 * i))
     }
     // console.log(linesArray)
     function animate(){
         // clear frame after aninmation
-        ctx4.clearRect(0, 0, canvas4.width, canvas4.height)
+        ctx4.clearRect(0, 0, canvas.width, canvas.height)
         linesArray.forEach(line => {
             //draw line
             line.draw(ctx4)

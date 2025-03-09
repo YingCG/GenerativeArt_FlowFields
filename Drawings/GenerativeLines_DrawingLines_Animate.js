@@ -36,9 +36,11 @@ class Line3{
 }
 
 const linesArray = []
-const numberOfLines = 1;
+const numberOfLines = 3;
 for (let i = 0; i < numberOfLines; i++){
+
     linesArray.push(new Line3(canvas3))
+
 }
 // console.log(linesArray)
 function animate(){
