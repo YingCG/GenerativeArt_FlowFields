@@ -1,4 +1,4 @@
-const resetBtn = document.getElementById("regenerate")
+const resetBtn = document.getElementById("generate")
 const canvases = document.querySelectorAll("canvas");
 
 

@@ -7,14 +7,21 @@
     ctx.font = "50px Arial";
     ctx.fillStyle = "white";
 
-    ctx.fillText("Click here",50,100);
+    ctx.fillText("Click here",50, 100);
+
+    function getCursorPosition(event) {
+        const rect = canvas.getBoundingClientRect()
+        const x = (event.clientX - rect.left) * (100/ 35) 
+        const y = (event.clientY - rect.top) *( 100 /15)
+        return [x, y];
+    }
+
 canvas.addEventListener('click', (e) => {
     console.log(e)
     ctx.fillStyle = "#B771E5"
-    ctx.fillRect(canvas.width/2 + e.x*2,canvas.height/2 + e.y *2, 50, 50);
-console.log(e.x, e.y)
-console.log(e.layerX, e.layerY)
-console.log(e.screenX, e.screenY)
+    const [x, y] = getCursorPosition(e);
+    ctx.fillRect(x, y, 50, 50);
+console.log(x, y)
 })
 
 
